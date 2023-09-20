@@ -18,6 +18,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+
         'email',
         'password',
     ];
@@ -29,6 +30,7 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'password',
+
     ];
 
     /**
@@ -37,6 +39,9 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
-        'password' => 'hashed',
+
     ];
+    public function Perfil(){
+        return $this->hasOne(Perfil::class);
+    }
 }

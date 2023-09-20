@@ -12,7 +12,7 @@ class ChatPerfilController extends Controller
      */
     public function index()
     {
-        //
+        return ChatPerfil::all();
     }
 
     /**
